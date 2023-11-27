@@ -77,7 +77,6 @@ export const fetchPhotos = async (query = 'all') => {
             }
         });
 
-
         CardWrapper(PHOTOS);
         
         const heartIconsElements = document.querySelectorAll('.hover i');
@@ -87,6 +86,12 @@ export const fetchPhotos = async (query = 'all') => {
         const wrapperElement = document.querySelector('.cards-container');
 
         infiniteScrolling(wrapperElement, query);
+        
+        const ExistingDivNotFoundImg = document.querySelector('not-found-container');
+        
+        if(ExistingDivNotFoundImg) {
+            ExistingDivNotFoundImg.remove();
+        }
         
         if(!PHOTOS.length) {
             
