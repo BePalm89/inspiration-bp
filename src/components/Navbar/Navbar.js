@@ -1,4 +1,4 @@
-import { Logo } from '../Logo/Logo.JS';
+import { Logo } from '../Logo/Logo';
 import { SearchBar } from '../SearchBar/SearchBar';
 import { FiltersBar } from '../FiltersBar/FiltersBar';
 import './Navbar.css';
