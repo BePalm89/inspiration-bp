@@ -24,15 +24,15 @@ This is a mix copy between pinterest and unsplahs, a website where you can find 
 
 ### Desktop:
 
-![image info](./public/design/desktop.png);
+![image info](./public/design/desktop.png)
 
 ### Tablet:
 
-![image info](./public/design/tablet.png);
+![image info](./public/design/tablet.png)
 
 ### Mobile:
 
-![image info](./public/design/mobile.png);
+![image info](./public/design/mobile.png)
 
 ### Card hover:
 
