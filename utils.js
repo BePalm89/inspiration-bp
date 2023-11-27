@@ -1,6 +1,5 @@
-import { generateCards } from "./src/components/CardsWrapper/CardsWrapper";
+import { CardWrapper, generateCards } from "./src/components/CardsWrapper/CardsWrapper";
 import { Navbar } from "./src/components/Navbar/Navbar";
-import { CardWrapper } from './src/components/CardsWrapper/CardsWrapper'
 import { createApi } from 'unsplash-js';
 
 let PHOTOS = [];
@@ -23,7 +22,7 @@ const addEventListenerToHeartIcons = (heartIconsElement) => {
       }
 }
 
-const infiniteScrolling = async (query = 'all', wrapperElement) => {
+const infiniteScrolling = async (wrapperElement, query = 'all') => {
 
     window.addEventListener('scroll', async()=>{
         const {scrollHeight,scrollTop,clientHeight} = document.documentElement;
@@ -78,6 +77,7 @@ export const fetchPhotos = async (query = 'all') => {
             }
         });
 
+
         CardWrapper(PHOTOS);
         
         const heartIconsElements = document.querySelectorAll('.hover i');
@@ -86,7 +86,25 @@ export const fetchPhotos = async (query = 'all') => {
 
         const wrapperElement = document.querySelector('.cards-container');
 
-        infiniteScrolling(query, wrapperElement);
+        infiniteScrolling(wrapperElement, query);
+        
+        if(!PHOTOS.length) {
+            
+            document.querySelector('.loading').remove();
+
+            const divNotFoundImg = document.createElement('div');
+            divNotFoundImg.classList = 'not-found-container';
+
+            const notFoundImg = document.createElement('img');
+            notFoundImg.src = '/images/not-found.png';
+            notFoundImg.alt = 'not-found';
+            notFoundImg.className = 'not-found';
+
+            divNotFoundImg.appendChild(notFoundImg);
+
+            const mainElement = document.querySelector('main');
+            mainElement.appendChild(divNotFoundImg);
+        }
     
     } catch (error) {
         console.error('Error fetching photos:', error);

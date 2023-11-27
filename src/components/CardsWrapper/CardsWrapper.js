@@ -25,7 +25,7 @@ export const CardWrapper = (data) => {
 
     const existingCardsContainer = document.querySelector('.cards-container');
     const existingLoadingElement = document.querySelector('.loading');
-    if (existingCardsContainer) {
+    if (existingCardsContainer && existingLoadingElement) {
         existingCardsContainer.remove();
         existingLoadingElement.remove();
     }
