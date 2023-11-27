@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+:root {
+  --ibp-white: #FFFFFF;
+  --ibp-black: #111111;
+  --ibp-gray-light: #EEEEEE;
+  --ibp-gray-dark: #767676;
+  --ibp-gray-dark-2: #aca7a7;
+
+  --ibp-font-family: 'Ubuntu', sans-serif;
+
+  --ibp-font-size-xs: 12px;
+  --ibp-font-size-s: 14px;
+  --ibp-font-size-m: 24px;
+  --ibp-font-size-l: 32px;
+  --ibp-font-size-xl: 40px;
+
+  --ibp-font-weight-regular: 400;
+  --ibp-font-weight-bold: 700;
+
+  --ibp-spacing-xs: 0.5rem;
+  --ibp-spacing-s: 1rem;
+  --ibp-spacing-m: 2rem;
+  --ibp-spacing-l: 3rem;
+  --ibp-spacing-xl: 4rem;
+  
+  --ibp-margin-xs : var(--ibp-spacing-xs);
+  --ibp-margin-s : var(--ibp-spacing-s);
+  --ibp-margin-m : var(--ibp-spacing-m);
+  --ibp-margin-l : var(--ibp-spacing-l);
+  --ibp-margin-xl : var(--ibp-spacing-xl);
+  
+  --ibp-padding-xs : var(--ibp-spacing-xs);
+  --ibp-padding-s : var(--ibp-spacing-s);
+  --ibp-padding-m : var(--ibp-spacing-m);
+  --ibp-padding-l : var(--ibp-spacing-l);
+  --ibp-padding-xl : var(--ibp-spacing-xl);
+  
+  --ibp-gap-xs : var(--ibp-spacing-xs);
+  --ibp-gap-s : var(--ibp-spacing-s);
+  --ibp-gap-m : var(--ibp-spacing-m);
+  --ibp-gap-l : var(--ibp-spacing-l);
+  --ibp-gap-xl : var(--ibp-spacing-xl);
+  
+  --ibp-border-radius-xs: 4px;
+  --ibp-border-radius-s: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--ibp-font-family);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}

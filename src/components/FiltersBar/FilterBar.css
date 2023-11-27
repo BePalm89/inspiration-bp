@@ -1,0 +1,31 @@
+.filter-container {
+    display: flex;
+    gap: var(--ibp-gap-l);
+    justify-content: space-between;
+    padding: var(--ibp-padding-s) var(--ibp-padding-xl);
+    overflow-x: auto;
+    margin-top: var(--ibp-margin-xs);
+}
+
+.filter-container li {
+    white-space: nowrap;
+    text-transform:capitalize;
+    font-size: var(--ibp-font-size-s);
+    font-weight: var(--ibp-font-weight-regular);
+    cursor: pointer;
+}
+
+.filter-container::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px var(--ibp-gray-light);
+    box-shadow: inset 0 0 6px var(--ibp-gray-light);
+	background-color: var(--ibp-white);
+}
+
+.filter-container::-webkit-scrollbar {
+	height: 2px;
+	background-color: var(--ibp-white);
+}
+
+.filter-container::-webkit-scrollbar-thumb {
+	border: 2px solid var(--ibp-gray-dark-2);
+}

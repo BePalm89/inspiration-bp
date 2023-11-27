@@ -1,0 +1,47 @@
+main {
+    padding: var(--ibp-padding-m) var(--ibp-padding-xl);
+}
+
+.cards-container {
+  columns: 3 320px;
+  column-gap: var(--ibp-gap-s);
+}
+
+.loading {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: var(--ibp-gap-xs);
+  margin-top: var(--ibp-margin-s);
+}
+
+.loading .ball-1, .loading .ball-2, .loading .ball-3 {
+  width: 8px;
+  height: 8px;
+  background-color: var(--ibp-black);
+  border-radius: 100%;
+}
+
+.loading .ball-1 {
+    animation: dot-flashing 1.5s  ease-in-out infinite ;
+    animation-delay: .1s;
+}
+
+.loading .ball-2 {
+  animation: dot-flashing 1.5s ease-in-out infinite;
+  animation-delay: .5s;
+}
+
+.loading .ball-3 {
+  animation: dot-flashing 1.5s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+@keyframes dot-flashing {
+  0% {
+    background-color: var(--ibp-gray-dark);
+  }
+  50%, 100% {
+    background-color: rgba(118, 118, 118, 0.2);
+  }
+}

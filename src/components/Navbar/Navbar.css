@@ -1,0 +1,13 @@
+header nav {
+    padding: var(--ibp-padding-s) var(--ibp-padding-xl);
+    box-shadow: 0px 4px 4px 0px rgba(17, 17, 17, 0.25);
+}
+
+header nav ul {
+    display: flex;
+    gap: var(--ibp-gap-m);
+}
+
+header nav ul li:last-of-type {
+    flex: 1;
+}

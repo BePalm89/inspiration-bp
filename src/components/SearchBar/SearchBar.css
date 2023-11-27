@@ -1,0 +1,24 @@
+.search-container {
+    background-color: var(--ibp-gray-light);
+    display: flex;
+    gap: var(--ibp-gap-xs);
+    align-items: center;
+    padding: var(--ibp-padding-xs) var(--ibp-padding-s);
+    width: 80%;
+    border-radius: var(--ibp-border-radius-s);
+    height: 40px;
+}
+
+.search-container img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.search-container input {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    outline: none; 
+}
