@@ -76,26 +76,11 @@ export const fetchPhotos = async (query = 'all') => {
                 userProfileImg: result.user.profile_image.small
             }
         });
-
-        CardWrapper(PHOTOS);
-        
-        const heartIconsElements = document.querySelectorAll('.hover i');
-
-        addEventListenerToHeartIcons(heartIconsElements);
-
-        const wrapperElement = document.querySelector('.cards-container');
-
-        infiniteScrolling(wrapperElement, query);
-        
-        const ExistingDivNotFoundImg = document.querySelector('not-found-container');
-        
-        if(ExistingDivNotFoundImg) {
-            ExistingDivNotFoundImg.remove();
-        }
         
         if(!PHOTOS.length) {
             
             document.querySelector('.loading').remove();
+            document.querySelector('.cards-container').remove();
 
             const divNotFoundImg = document.createElement('div');
             divNotFoundImg.classList = 'not-found-container';
@@ -109,6 +94,25 @@ export const fetchPhotos = async (query = 'all') => {
 
             const mainElement = document.querySelector('main');
             mainElement.appendChild(divNotFoundImg);
+
+        } else {
+            
+            CardWrapper(PHOTOS);
+        
+            const heartIconsElements = document.querySelectorAll('.hover i');
+    
+            addEventListenerToHeartIcons(heartIconsElements);
+    
+            const wrapperElement = document.querySelector('.cards-container');
+    
+            infiniteScrolling(wrapperElement, query);
+            
+            const existingDivNotFoundImg = document.querySelector('.not-found-container');
+            console.log(existingDivNotFoundImg);
+            
+            if(existingDivNotFoundImg) {
+                existingDivNotFoundImg.remove();
+            }
         }
     
     } catch (error) {
